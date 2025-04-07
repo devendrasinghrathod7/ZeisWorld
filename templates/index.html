@@ -1,0 +1,210 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <!--===========card start-->
+    <div class="container my-4">
+      <h1 class="my-2 text-center">Select from our range of Election</h1>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="/static/img/police1.jpg" alt="">   
+            <div class="card-body">
+              <h2 class="text-primary-emphasis">important part of Election.</h2>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-dark">View</button>
+                  <button type="button" class="btn btn-dark">Edit</button>
+                </div>
+                <small class="text-body-dark">7 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="/static/img/police2.jpg" alt="">
+            <div class="card-body">
+              <h2 class="text-primary-emphasis">The election is a handsome.</h2>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-dark">View</button>
+                  <button type="button" class="btn btn-dark">Edit</button>
+                </div>
+                <small class="text-body-dark">7 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="/static/img/police3.jpg" alt="">
+            <div class="card-body">
+              <h2 class="text-primary-emphasis">The nomination candidate.</h2>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-dark">View</button>
+                  <button type="button" class="btn btn-dark">Edit</button>
+                </div>
+                <small class="text-body-dark">7 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--===========card End==-->
+    
+    <!--===========Body Start-->
+    <div class="container marketing my-5">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        {% for category in categories  %}
+        <div class="col-lg-4">
+          <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="/media/{{ category.image }}" >
+          <h2 class="fw-normal">{{category.title}}</h2>
+          <p>{{category.description}}</p>
+          <p><a href="
+            {% if category.title == 'Trump' %}
+              {% url 'Trump' %}
+            {% elif category.title == 'Republican' %}
+              {% url 'Republican' %}
+            {% elif category.title == 'American' %}
+              {% url 'American' %}
+            {% endif %}"
+            class="btn btn-dark">{{category.title}}</a></p>
+          
+        </div>
+        {% endfor %}
+      </div>
+      <!-- /.row -->
+  
+  
+      <!-- START THE FEATURETTES -->
+  
+      <hr class="featurette-divider my-5">
+  
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">Donating benefits not only Black Voters Matter. <span class="text-body-secondary">It’ll blow your mind.</span></h2>
+          <p class="lead">Our goal is to increase power in marginalized, predominantly Black communities. We believe that effective voting allows a community to determine its own destiny.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="/static/img/photo4.jpg" width="500vw" height="500">
+        </div>
+      </div>
+  
+      <hr class="featurette-divider">
+  
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading fw-normal lh-1">Matter can be broken down into two categories. <span class="text-body-secondary"> pure substances and mixtures.</span></h2>
+          <p class="lead">
+            We Fight Back is a campaign designed to empower, mobilize, and engage Black voters on key issues like health equity, education, economic justice and more.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="/static/img/photo5.jpg" width="500vw" height="500">
+        </div>
+      </div>
+  
+      <hr class="featurette-divider">
+  
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">Types of Voting System. <span class="text-body-secondary">Checkmate.</span></h2>
+          <p class="lead">Different voting systems have a variety of different features, ranging from how proportional they are (whether seats in parliament reflect votes cast), the connection between MPs and their communities and the extent to which voters can choose between different candidates.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="/static/img/photo6.jpg" width="500vw" height="500">
+        </div>
+      </div>
+  
+      <hr class="featurette-divider">
+  
+      <!-- /END THE FEATURETTES -->
+  
+    </div>
+    <!--===========Body End==-->
+
+    <!--===========Album start-->
+    <div class="main-div">
+      <div class="imgre">
+        <h1 class="text-center">Recent Projects</h1>
+        
+        <p class="recent text-center">Present pellenceque efequeter magna,<br>
+        send pleanceque neque malesuanda viale.
+        </p>
+      <div class="threeimg">
+          <div class="bigimg">
+              <img src="/static/img/World_1.png" height="300vh"  class="img">
+          </div>
+          <div class="bigimg">
+            <img src="/static/img/World_7.jpeg" height="300vh"  class="img">
+          </div>
+          <div class="two">
+              <div class="oneimg">
+                  <img src="/static/img/World_2.png" height="300vh" class="img">              
+              </div>
+              
+          </div>
+      </div>
+      <div class="img2">
+          <div class="secondimg">
+            <img src="/static/img/World_3.png" height="300vh"  class="img">
+          </div>
+          <div class="img-one">
+              <img src="/static/img/World_4.png" height="300vh"  class="img">
+          </div>
+          <div class="img-second">
+              <img src="/static/img/World_5.png" height="300vh"  class="img">
+          </div>
+      </div>      
+    </div>
+    <!--===========Album End==-->
+    <!--===========News poll start-->
+    <!---===========News Start======-->
+    <section class="news">
+      <div class="row mx-4">
+        <div class="container my-5">
+          <div class="row">
+            <div class="col-md-9 border-end border-3">
+              {% for News in allnews %}
+              <div class="row my-5">
+                <div class="col-md-4">
+                  <img src="/media/{{ News.image }}" class="img-fluid" style="width:100vw;" alt="">
+                </div>
+                <div class="col-md-7 px-3">
+                  <h1>{{ News.title | truncatewords:8 }}</h1>
+                  <small class='text-primary-emphasis'>Published: {{News.date}}</small>
+                  <small class='text-primary-emphasis'>{{ News.category}}</small>
+                  <p>{{ News.description |truncatewords:40 }}</p>
+                    <a href="{% url 'details' News.id %}" class="btn btn-dark">Read More</a>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+            <div class="col-md-3">
+              <h3 class="my-4">Top News</h3>
+            {% for News in topNews %}
+            <a href="{% url 'details' News.id %}" class="link-primary-emphasis">
+              <div class="row my-5">
+                <div class="col-md-4">
+                  <img src="/media/{{ News.image }}" class= "img-fluid" alt="">
+                </div>
+                <div class="col-md-8">
+                  <p>{{ News.title | truncatewords:10 }}</p>
+                </div>
+              </div>
+            </a>
+            {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!---===========News end======-->
+{% endblock content %}

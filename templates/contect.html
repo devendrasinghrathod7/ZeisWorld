@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+    
+<!-- Contact Page -->
+<div class="container py-5">
+  <div class="row justify-content-center">
+      <div class="col-md-8">
+          <div class="card bg-white border-light">
+              <div class="card-body">
+                  <h2 class="text-center mb-4">Contact Us</h2>
+                  <p class="text-center mb-4">We'd love to hear from you! Please fill out the form below.</p>
+                  
+                  <form action="#" method="post">
+                      <!-- Name Input -->
+                      <div class="mb-3">
+                          <label for="name" class="form-label">Full Name</label>
+                          <input type="text" class="form-control bg-dark text-white border-light" id="name" placeholder="Enter your name" required>
+                      </div>
+
+                      <!-- Email Input -->
+                      <div class="mb-3">
+                          <label for="email" class="form-label">Email Address</label>
+                          <input type="email" class="form-control bg-dark text-white border-light" id="email" placeholder="Enter your email" required>
+                      </div>
+
+                      <!-- Subject Input -->
+                      <div class="mb-3">
+                          <label for="subject" class="form-label">Subject</label>
+                          <input type="text" class="form-control bg-dark text-white border-light" id="subject" placeholder="Subject of your message" required>
+                      </div>
+
+                      <!-- Message Textarea -->
+                      <div class="mb-3">
+                          <label for="message" class="form-label">Your Message</label>
+                          <textarea class="form-control bg-dark text-white border-light" id="message" rows="5" placeholder="Write your message here" required></textarea>
+                      </div>
+
+                      <!-- Submit Button -->
+                      <div class="text-center">
+                          <button type="submit" class="btn btn-dark">Send Message</button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Footer Section -->
+
+
+   
+  
+  
+      
+{% endblock content %}
